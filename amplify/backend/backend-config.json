@@ -1,1 +1,63 @@
-{}
+{
+  "api": {
+    "A2FChallengeApi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "A2FChallengeBibleBooksLambda"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "A2FChallengeBibleBooksLambda": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "A2FChallengeBibleBooksDb"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_A2FChallengeBibleBooksLambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "A2FChallengeBibleBooksLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_A2FChallengeBibleBooksLambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "A2FChallengeBibleBooksLambda"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "A2FChallengeBibleBooksDb": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    }
+  }
+}

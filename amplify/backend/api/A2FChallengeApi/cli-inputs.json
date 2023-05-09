@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/bible-books": {
+      "name": "/bible-books",
+      "lambdaFunction": "A2FChallengeBibleBooksLambda",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

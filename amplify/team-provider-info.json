@@ -10,6 +10,20 @@
       "StackName": "amplify-a2fchallengeapp-dev-123338",
       "StackId": "arn:aws:cloudformation:us-east-1:166939809217:stack/amplify-a2fchallengeapp-dev-123338/413dacb0-ee87-11ed-8e91-12d2865ede39",
       "AmplifyAppId": "d2isu00miy257t"
+    },
+    "categories": {
+      "function": {
+        "A2FChallengeBibleBooksLambda": {
+          "deploymentBucketName": "amplify-a2fchallengeapp-dev-123338-deployment",
+          "s3Key": "amplify-builds/A2FChallengeBibleBooksLambda-59484850435a31555845-build.zip"
+        }
+      },
+      "storage": {
+        "A2FChallengeBibleBooksDb": {}
+      },
+      "api": {
+        "A2FChallengeApi": {}
+      }
     }
   }
 }

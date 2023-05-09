@@ -1,0 +1,10 @@
+{
+  "resourceName": "A2FChallengeBibleBooksDb",
+  "tableName": "BibleBook",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "number"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
